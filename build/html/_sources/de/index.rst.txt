@@ -2,7 +2,7 @@ Handbuch OBP-Plotter V4
 =======================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Einführung
    :name: sec-intro
 
@@ -24,7 +24,7 @@ Handbuch OBP-Plotter V4
  
    
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Hilfe
    :name: sec-help   
 
@@ -35,7 +35,7 @@ Handbuch OBP-Plotter V4
    Service <help/service>
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Anhang
    :name: sec-appendix   
    
