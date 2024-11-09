@@ -1,0 +1,6 @@
+# This file was manually created
+msgid "Welcome to My Documentation"
+msgstr ""
+
+msgid "This is a placeholder text."
+msgstr ""

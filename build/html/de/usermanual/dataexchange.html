@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Der Plotter im Netzwerk &mdash; OBP-Plotter V4 Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sensorik" href="sensors.html" />
+    <link rel="prev" title="Konfiguration Android" href="android_configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            OBP-Plotter V4 Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Sprachen</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../en/index.html">Manual (en)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../en/content_en.html">Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Handbuch (de)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/plotter_short.html">Übersicht</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/usecases.html">Varianten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="start.html">Inbetriebnahme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="start.html#vorbereitung">Vorbereitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="start.html#stromversorgung">Stromversorgung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="start.html#einschalten">Einschalten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="start.html#einbaumoglichkeiten">Einbaumöglichkeiten</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_install.html">Installation Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_configuration.html">Konfiguration Android</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Der Plotter im Netzwerk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wlan">WLAN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nmea-2000">NMEA 2000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nmea0183-usb">NMEA0183 - USB</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensors.html">Fernbedienung und Sensorik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samples.html">AvNav im Einsatz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html">Sicherheitshinweise</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#allgemeine-hinweise">Allgemeine Hinweise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#sicherheit-im-wifi-netzwerk">Sicherheit im WiFi-Netzwerk</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../help/faq.html">Fragen und Antworten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../help/opinions.html">Meinungen und Tipps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../help/errors.html">Bekannte Fehler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../help/errors.html#kritische-fehler">Kritische Fehler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../help/errors.html#software-fehler">Software-Fehler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../help/errors.html#hardware-fehler">Hardware-Fehler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../help/errors.html#behobene-fehler">Behobene Fehler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../help/errors.html#software-erweiterungen">Software-Erweiterungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../help/errors.html#neue-anzeigeseiten">Neue Anzeigeseiten</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../help/support.html">Technische Unterstützung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../help/service.html">Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/specification.html">Technische Daten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/specification.html#funktionen">Funktionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/specification.html#aufbau">Aufbau</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/specification.html#spezifikation">Spezifikation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/specification.html#anschlussbelegung">Anschlussbelegung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/specification.html#schaltplan">Schaltplan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/specification.html#nutzbare-i2c-sensorik">Nutzbare I2C-Sensorik</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/device.html">DIY-Möglichkeiten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/historie.html">Historie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/cooperation.html">Mitarbeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/donation.html">Spenden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossar.html">Glossar</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OBP-Plotter V4 Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Handbuch OBP-Plotter V4</a></li>
+      <li class="breadcrumb-item active">Der Plotter im Netzwerk</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/de/usermanual/dataexchange.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="der-plotter-im-netzwerk">
+<span id="id1"></span><h1>Der Plotter im Netzwerk<a class="headerlink" href="#der-plotter-im-netzwerk" title="Link to this heading"></a></h1>
+<section id="wlan">
+<h2>WLAN<a class="headerlink" href="#wlan" title="Link to this heading"></a></h2>
+</section>
+<section id="nmea-2000">
+<h2>NMEA 2000<a class="headerlink" href="#nmea-2000" title="Link to this heading"></a></h2>
+<p>Das <a class="reference external" href="https://open-boat-projects.org/de/nmea2000-gateway-mit-m5stack-atom/">NMEA2000-Gateway</a> ist ein Open Source Projekt von Andreas Wellenvogel. Es ist eine Software, mit der man bidirektionale Datenkonvertierungen zwischen NMEA2000 und NMEA0183 durchführen kann. Die Software ist so gestaltet, dass sie unterschiedliche kommerzielle Hardware unterstützen kann. So läuft das NMEA2000-Gateway z.B. auf einer Reihe von Produkten der Firma <a class="reference external" href="https://shop.m5stack.com/collections/all-products/m5stack-atom">M5Stack</a> wie dem <strong>M5Stack Atom</strong>, aber auch auf ESP32-Entwicklerboards wie dem <strong>ESP32 Node MCU</strong>. Es werden ESP32-CPUs in unterschiedlicher Ausprägung unterstützt wie der ESP32-Wroom und der ESP32-S3. Die Hardwareansteuerung des OBP60 ist über eigenständige Tasks implementiert und nutzt die Grundfunktionalität des NMEA2000-Gateways.</p>
+<p>Die gesamte Datenverarbeitung sämtlicher Bussysteme und Konvertierungen ist Bestandteil des NMEA2000-Gateways. Neben NMEA2000 (<strong>CAN</strong>) werden weitere Bussysteme wie <strong>I2C</strong> unterstützt. Die Hauptaufgabe des NMEA2000-Gateways besteht darin, alle ankommenden Daten der Busssysteme zu empfangen und in einem gemeinsamen Daten-Pool abzubilden. Diese Daten können über die Webseite <strong>Data</strong> eingesehen werden.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>NMEA2000</dt><dd><ul>
+<li><p>Kabelgebunden NMEA2000-Bus (halbduplex)</p></li>
+<li><p>Über WiFi via SeaSmart (vollduplex)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>I2C</strong> (halbduplex)</p></li>
+</ul>
+<p>Der kabelgebundene NMEA2000-Bus ist der aktuelle Standard in der Bootsvernetzung. Über ein NMEA2000-Backbone auf CAN-Basis werden verschiedene Geräte an das Bussystem angeschlossen. Alle Bus-Teilnehmer können Daten lesen und schreiben. Dabei sind Sensoren Datenlieferanten, die ihre Daten an Displays und Plotter übertragen. Das NMEA2000-Backbone kann Sensoren auch mit Strom versorgen. Die Einspeisung der Versorgunsgspannung erfolgt über einen Plotter oder über ein Einspeisekabel.</p>
+<p>Für den Betrieb von NMEA2000 muss nichts speziell konfiguriert werden. Die Standardeinstellungen sind so gesetzt, dass ein Betrieb problemlos möglich ist. Bei Bedarf kann das Senden von NMEA2000-Telegrammen unterbunden werden. Dann ist nur ein Empfang von NMEA2000-Telegrammen möglich.</p>
+</section>
+<section id="nmea0183-usb">
+<h2>NMEA0183 - USB<a class="headerlink" href="#nmea0183-usb" title="Link to this heading"></a></h2>
+<p>NMEA0183-Telegramme lassen sich auch über USB vollduplex übertragen. Das bedeutet, dass Daten gleichzeitig gesendet und empfangen werden können. Den USB-Port für die Datenübertragung findet man auf der Rückseite des OBP60 unterhalb des Steckverbinders <strong>CN2</strong>. Er ist als USB-C ausgeführt. Die USB-Schnittstelle im OBP60 ist als serielles RS232 Device implementiert und unterstützt die Übertragungsgeschwindigkeiten 1.200…460.800 Bd. Die Defaulteinstellung für die Datenübertragung ist auf 115.200 Bd eingestellt und sollte für die meisten Anwendungen ausreichend schnell sein. Die Daten werden ausschließlich als NMEA0183-Daten über USB übertragen.</p>
+<p>Als mögliche Endpunkte könnte folgende Hardware verwendet werden:</p>
+<ul class="simple">
+<li><p>Raspberry Pi 3, 3B, 4B, 5</p></li>
+<li><p>Android Autoradio</p></li>
+<li><p>Laptop</p></li>
+<li><p>PC</p></li>
+</ul>
+<p>Die NMEA0183-Daten lassen sich in unterschiedliche Software einbinden wie:</p>
+<ul class="simple">
+<li><p>AVnav</p></li>
+<li><p>OpenPlotter</p></li>
+<li><p>OpenCPN</p></li>
+<li><p>BBN</p></li>
+<li><p>SignalK</p></li>
+<li><p>qtVlm</p></li>
+<li><p>Navionics</p></li>
+<li><p>WinGPS</p></li>
+<li><p>NMEA Simulator</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="android_configuration.html" class="btn btn-neutral float-left" title="Konfiguration Android" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sensors.html" class="btn btn-neutral float-right" title="Sensorik" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Christian Hartz, Norbert Walter, Michael Maaß.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
