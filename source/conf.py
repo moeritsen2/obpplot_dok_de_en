@@ -6,6 +6,14 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+
+# Konfiguration von Sphinx
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+
+# Projektinformationen
+
 project = 'OBP-Plotter V4 Documentation'
 copyright = '2024, Christian Hartz, Norbert Walter, Michael Maaß'
 author = 'Christian Hartz, Norbert Walter, Michael Maaß'
@@ -67,4 +75,8 @@ gettext_compact = False  # Nützlich für die Handhabung von Übersetzungen
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+html_css_files = [
+    'my-styles.css',
+]
 

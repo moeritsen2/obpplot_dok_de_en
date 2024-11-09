@@ -1,8 +1,5 @@
 Handbuch OBP-Plotter V4
 =======================
-.. toctree::
-   :maxdepth: 2
-   :caption: Inhalt:
 
 .. toctree::
    :maxdepth: 3
@@ -10,7 +7,7 @@ Handbuch OBP-Plotter V4
    :name: sec-intro
 
    Übersicht <intro/plotter_short>
-   Varianten <intro/usecases>
+   Einsatzmöglichkeiten <intro/usecases>
    
 .. toctree::
    :maxdepth: 3
