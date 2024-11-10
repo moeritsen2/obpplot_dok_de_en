@@ -20,15 +20,12 @@ To equip the plotter itself with a new Android operating system, proceed as foll
 * Install further software
 
 
-
 ... hint::
 The regular power supply 
 
 ... danger::
 In some situations 
 
-.. attention::
-If the 
 
 **Communication** 
 
